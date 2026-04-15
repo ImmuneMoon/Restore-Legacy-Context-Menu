@@ -1,0 +1,1 @@
+Please save your work! This installer will briefly restart File Explorer to apply the changes.
