@@ -18,3 +18,5 @@ Build Instructions
     Click Build > Compile (Ctrl + F9).
 
     The compiled setup wizard will be output to a new installer directory as WinContextMenuRestore.exe.
+
+You may also just use the provided .bat to apply if you'd prefer
