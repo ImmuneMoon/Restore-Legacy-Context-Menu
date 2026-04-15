@@ -19,4 +19,4 @@ Build Instructions
 
     The compiled setup wizard will be output to a new installer directory as WinContextMenuRestore.exe.
 
-You may also just use the provided .bat to apply if you'd prefer
+You may also just use the provided .bat to apply the fix if you'd prefer. Or use iexpress to compile an .exe  with it, instead of Inno. See my iexpress shortcut here[https://github.com/ImmuneMoon/iexpress-universal-shortcut] for easy application access.
