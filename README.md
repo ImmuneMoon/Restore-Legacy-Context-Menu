@@ -1,25 +1,59 @@
-# Building from Source (For Developers)
+# Restore Legacy Context Menu
 
-If you'd like to compile the installer yourself:
-Prerequisites
+Brings back the classic, full right-click menu on Windows 11, so you no longer have to click **Show more options** to reach it.
 
-    Inno Setup 6+
+## Install
 
-    A MenuIcon.ico file placed in the repository root
+1. Download `WinContextMenuRestore.exe` from the
+   [latest release](https://github.com/ImmuneMoon/Restore-Legacy-Context-Menu/releases/latest).
+2. Save any open work. The installer briefly restarts File Explorer.
+3. Run the installer and follow the prompt.
 
-    A warning.txt file placed in the repository root (used for the setup prompt)
+Right-click anywhere afterwards and the classic menu appears straight away.
 
-Build Instructions
+### Without the installer
 
-    Clone this repository to your local machine.
+Download and run `ContextMenuRestore.bat` instead. It does exactly the same thing.
 
-    Open the main .iss script in the Inno Setup Compiler.
+## What it changes
 
-    Click Build > Compile (Ctrl + F9).
+The fix adds one empty registry key under your own user account:
 
-    The compiled setup wizard will be output to a new installer directory as WinContextMenuRestore.exe.
+```text
+HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32
+```
 
-You may also just use the provided .bat to apply the fix if you'd prefer. Or use iexpress to compile an .exe  with it, instead of Inno. See my iexpress shortcut here[https://github.com/ImmuneMoon/iexpress-universal-shortcut] for easy application access.
+It then restarts File Explorer so the change takes effect. Nothing is installed system-wide and no administrator rights are needed.
+
+## Undo
+
+To go back to the Windows 11 menu, run this in a Command Prompt and then restart File Explorer or sign out:
+
+```bat
+reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
+```
+
+## Requirements
+
+- Windows 11
+
+## Building from source
+
+To compile the installer yourself you need:
+
+- [Inno Setup 6](https://jrsoftware.org/isinfo.php) or newer
+- `MenuIcon.ico` in the repository root
+- `warning.txt` in the repository root, which is used for the setup prompt
+
+Steps:
+
+1. Clone this repository.
+2. Open the `.iss` script in the Inno Setup Compiler.
+3. Choose **Build > Compile**, or press Ctrl+F9.
+4. The compiled installer is written to an `installer` folder as `WinContextMenuRestore.exe`.
+
+You can also package the `.bat` file with IExpress instead of Inno Setup. See the
+[IExpress Universal Shortcut](https://github.com/ImmuneMoon/iexpress-universal-shortcut) for quick access to that tool.
 
 ## ☕ Support the Project
 
