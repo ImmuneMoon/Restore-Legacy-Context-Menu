@@ -1,5 +1,11 @@
 # Restore Legacy Context Menu
 
+[![Release](https://img.shields.io/github/v/release/ImmuneMoon/Restore-Legacy-Context-Menu?color=blue&logo=github)](https://github.com/ImmuneMoon/Restore-Legacy-Context-Menu/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/ImmuneMoon/Restore-Legacy-Context-Menu/total?logo=github)](https://github.com/ImmuneMoon/Restore-Legacy-Context-Menu/releases)
+![Windows 11](https://img.shields.io/badge/Windows-11-0078D4?logo=windows&logoColor=white)
+![Inno Setup installer](https://img.shields.io/badge/Installer-Inno%20Setup-264de4)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
 Brings back the classic, full right-click menu on Windows 11, so you no longer have to click **Show more options** to reach it.
 
 ## Install
